@@ -1,9 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'node:latest'
-            args '-u root'
-        }
+    agent any
     }
     stages {
         stage("check node version") {
