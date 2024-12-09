@@ -1,19 +1,15 @@
-pipeline{
-    agent{
+pipeline {
+    agent {
         label "node"
-        agent any
-
     }
-    stages{
-        stage("check node version"){
-            steps{
-                sh '''node -v
-                npm -v
+    stages {
+        stage("check node version") {
+            steps {
+                sh '''
+                    node -v
+                    npm -v
                 '''
-
             }
-            
         }
     }
-    
 }
